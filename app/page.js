@@ -8,7 +8,7 @@ export default function Home() {
       case 'add':
         return {count:state.count+1};
         case 'delete':
-          return {count:state.count-1};
+          return {count: state.count > 0 ? state.count - 1 : 0};
         case "deleteAll":
           return {count:0};
           default :return state;
@@ -21,9 +21,9 @@ export default function Home() {
       <button onClick={() => dispatch({type: 'add'})} id="addTaskBtn">Add a task</button>
       <button onClick={() => dispatch({type: 'delete'})}  id="delTaskBtn">Delete a task</button>
       <button onClick={() => dispatch({type: 'deleteAll'})}  id="delAllTaskBtn">Delete all tasks</button>
-  <h3 className="counter">Number of Tasks : {taskState.count}</h3>
+      <h3 className="counter">Number of Tasks : {taskState.count}</h3>
 
-    {/*Update the above code to achieve the solution*/}
+  
     </div>
   )
 }
