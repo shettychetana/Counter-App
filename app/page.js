@@ -22,8 +22,6 @@ export default function Home() {
       <button onClick={() => dispatch({type: 'delete'})}  id="delTaskBtn">Delete a task</button>
       <button onClick={() => dispatch({type: 'deleteAll'})}  id="delAllTaskBtn">Delete all tasks</button>
       <h3 className="counter">Number of Tasks : {taskState.count}</h3>
-
-  
     </div>
   )
 }
